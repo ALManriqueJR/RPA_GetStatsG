@@ -1,0 +1,339 @@
+{"level":30,"time":"2022-09-11T18:11:27.773Z","pid":896,"hostname":"jarvis","msg":"Listening on 60463"}
+{"level":30,"time":"2022-09-11T18:11:27.966Z","pid":896,"hostname":"jarvis","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-11T18:11:27.967Z","pid":896,"hostname":"jarvis","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-11T18:11:27.968Z","pid":896,"hostname":"jarvis","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-11T18:11:27.968Z","pid":896,"hostname":"jarvis","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-11T18:11:27.971Z","pid":896,"hostname":"jarvis","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2022-09-11T18:11:28.279Z","pid":896,"hostname":"jarvis","msg":"End of node method newBrowser"}
+{"level":30,"time":"2022-09-11T18:11:28.282Z","pid":896,"hostname":"jarvis","msg":"Start of node method newPage"}
+{"level":30,"time":"2022-09-11T18:11:28.283Z","pid":896,"hostname":"jarvis","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2022-09-11T18:11:28.295Z","pid":896,"hostname":"jarvis","msg":"Changed active context"}
+{"level":30,"time":"2022-09-11T18:11:28.405Z","pid":896,"hostname":"jarvis","msg":"Video path: undefined"}
+{"level":30,"time":"2022-09-11T18:11:28.405Z","pid":896,"hostname":"jarvis","msg":"Changed active page"}
+{"level":30,"time":"2022-09-11T18:11:29.487Z","pid":896,"hostname":"jarvis","msg":"End of node method newPage"}
+{"level":30,"time":"2022-09-11T18:11:29.491Z","pid":896,"hostname":"jarvis","msg":"Start of node method click"}
+{"level":30,"time":"2022-09-11T18:11:29.491Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@id=\"ncmp__tool\"]/div/div/div[3]/div[1]/button[2] in page."}
+{"level":30,"time":"2022-09-11T18:11:29.712Z","pid":896,"hostname":"jarvis","msg":"End of node method click"}
+{"level":30,"time":"2022-09-11T18:11:29.714Z","pid":896,"hostname":"jarvis","msg":"Start of node method click"}
+{"level":30,"time":"2022-09-11T18:11:29.714Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@for='1609326270'] in page."}
+{"level":30,"time":"2022-09-11T18:11:29.965Z","pid":896,"hostname":"jarvis","msg":"End of node method click"}
+{"level":30,"time":"2022-09-11T18:11:29.967Z","pid":896,"hostname":"jarvis","msg":"Start of node method click"}
+{"level":30,"time":"2022-09-11T18:11:29.967Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@for='1937977254'] in page."}
+{"level":30,"time":"2022-09-11T18:11:30.276Z","pid":896,"hostname":"jarvis","msg":"End of node method click"}
+{"level":30,"time":"2022-09-11T18:11:30.281Z","pid":896,"hostname":"jarvis","msg":"Start of node method selectOption"}
+{"level":30,"time":"2022-09-11T18:11:30.281Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@id=\"weapons\"]/table/tbody/tr/td[1]/select in page."}
+{"level":30,"time":"2022-09-11T18:11:30.816Z","pid":896,"hostname":"jarvis","msg":"Option entries: 6"}
+{"level":30,"time":"2022-09-11T18:11:30.816Z","pid":896,"hostname":"jarvis","msg":"Selected entries: 1"}
+{"level":30,"time":"2022-09-11T18:11:30.816Z","pid":896,"hostname":"jarvis","msg":"End of node method selectOption"}
+{"level":30,"time":"2022-09-11T18:11:32.821Z","pid":896,"hostname":"jarvis","msg":"Start of node method getElementCount"}
+{"level":30,"time":"2022-09-11T18:11:32.822Z","pid":896,"hostname":"jarvis","msg":"Strict mode is disabled, return Locator: //*[@class='genshin_table sortable weapon_table']/tbody/tr in page."}
+{"level":30,"time":"2022-09-11T18:11:32.825Z","pid":896,"hostname":"jarvis","msg":"End of node method getElementCount"}
+{"level":30,"time":"2022-09-11T18:11:32.827Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.827Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[1]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:32.837Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[1]/td[2]/a containing Dull Blade"}
+{"level":30,"time":"2022-09-11T18:11:32.838Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.841Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.841Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[1]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:32.849Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[1]/td[4] containing 23.25"}
+{"level":30,"time":"2022-09-11T18:11:32.849Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.851Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.851Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[2]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:32.860Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[2]/td[2]/a containing Silver Sword"}
+{"level":30,"time":"2022-09-11T18:11:32.860Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.862Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.862Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[2]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:32.869Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[2]/td[4] containing 32.93"}
+{"level":30,"time":"2022-09-11T18:11:32.869Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.871Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.871Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[3]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:32.878Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[3]/td[2]/a containing Cool Steel"}
+{"level":30,"time":"2022-09-11T18:11:32.878Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.879Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.880Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[3]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:32.886Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[3]/td[4] containing 38.74"}
+{"level":30,"time":"2022-09-11T18:11:32.886Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.888Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.888Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[4]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:32.895Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[4]/td[2]/a containing Harbinger of Dawn"}
+{"level":30,"time":"2022-09-11T18:11:32.895Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.897Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.897Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[4]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:32.904Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[4]/td[4] containing 38.74"}
+{"level":30,"time":"2022-09-11T18:11:32.904Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.906Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.906Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[5]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:32.913Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[5]/td[2]/a containing Traveler's Handy Sword"}
+{"level":30,"time":"2022-09-11T18:11:32.913Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.914Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.914Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[5]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:32.921Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[5]/td[4] containing 39.88"}
+{"level":30,"time":"2022-09-11T18:11:32.921Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.923Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.923Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[6]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:32.930Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[6]/td[2]/a containing Dark Iron Sword"}
+{"level":30,"time":"2022-09-11T18:11:32.930Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.932Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.932Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[6]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:32.939Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[6]/td[4] containing 38.74"}
+{"level":30,"time":"2022-09-11T18:11:32.939Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.941Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.942Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[7]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:32.948Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[7]/td[2]/a containing Fillet Blade"}
+{"level":30,"time":"2022-09-11T18:11:32.948Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.949Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.949Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[7]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:32.956Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[7]/td[4] containing 38.74"}
+{"level":30,"time":"2022-09-11T18:11:32.956Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.958Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.958Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[8]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:32.965Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[8]/td[2]/a containing Skyrider Sword"}
+{"level":30,"time":"2022-09-11T18:11:32.965Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.966Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.966Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[8]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:32.972Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[8]/td[4] containing 37.61"}
+{"level":30,"time":"2022-09-11T18:11:32.972Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.974Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.975Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[9]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:32.983Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[9]/td[2]/a containing Favonius Sword"}
+{"level":30,"time":"2022-09-11T18:11:32.983Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.985Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.985Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[9]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:32.992Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[9]/td[4] containing 41.07"}
+{"level":30,"time":"2022-09-11T18:11:32.992Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.995Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:32.995Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[10]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.003Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[10]/td[2]/a containing The Flute"}
+{"level":30,"time":"2022-09-11T18:11:33.003Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.004Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.004Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[10]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.010Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[10]/td[4] containing 42.4"}
+{"level":30,"time":"2022-09-11T18:11:33.010Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.012Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.012Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[11]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.020Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[11]/td[2]/a containing Sacrificial Sword"}
+{"level":30,"time":"2022-09-11T18:11:33.020Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.021Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.021Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[11]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.030Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[11]/td[4] containing 41.07"}
+{"level":30,"time":"2022-09-11T18:11:33.030Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.032Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.032Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[12]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.038Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[12]/td[2]/a containing Royal Longsword"}
+{"level":30,"time":"2022-09-11T18:11:33.038Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.039Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.040Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[12]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.046Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[12]/td[4] containing 42.4"}
+{"level":30,"time":"2022-09-11T18:11:33.046Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.048Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.048Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[13]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.054Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[13]/td[2]/a containing Lion's Roar"}
+{"level":30,"time":"2022-09-11T18:11:33.054Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.056Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.056Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[13]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.088Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[13]/td[4] containing 42.4"}
+{"level":30,"time":"2022-09-11T18:11:33.088Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.091Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.091Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[14]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.097Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[14]/td[2]/a containing Prototype Rancour"}
+{"level":30,"time":"2022-09-11T18:11:33.097Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.098Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.098Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[14]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.104Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[14]/td[4] containing 43.73"}
+{"level":30,"time":"2022-09-11T18:11:33.104Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.106Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.106Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[15]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.113Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[15]/td[2]/a containing Iron Sting"}
+{"level":30,"time":"2022-09-11T18:11:33.113Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.114Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.114Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[15]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.120Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[15]/td[4] containing 42.4"}
+{"level":30,"time":"2022-09-11T18:11:33.120Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.122Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.122Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[16]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.131Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[16]/td[2]/a containing Blackcliff Longsword"}
+{"level":30,"time":"2022-09-11T18:11:33.131Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.132Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.132Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[16]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.139Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[16]/td[4] containing 43.73"}
+{"level":30,"time":"2022-09-11T18:11:33.139Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.141Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.141Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[17]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.148Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[17]/td[2]/a containing The Black Sword"}
+{"level":30,"time":"2022-09-11T18:11:33.148Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.149Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.149Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[17]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.156Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[17]/td[4] containing 42.4"}
+{"level":30,"time":"2022-09-11T18:11:33.156Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.158Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.158Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[18]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.165Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[18]/td[2]/a containing The Alley Flash"}
+{"level":30,"time":"2022-09-11T18:11:33.165Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.167Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.167Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[18]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.174Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[18]/td[4] containing 45.07"}
+{"level":30,"time":"2022-09-11T18:11:33.174Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.177Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.177Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[19]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.184Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[19]/td[2]/a containing Sword of Descension"}
+{"level":30,"time":"2022-09-11T18:11:33.184Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.186Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.186Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[19]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.195Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[19]/td[4] containing 38.74"}
+{"level":30,"time":"2022-09-11T18:11:33.195Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.197Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.197Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[20]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.204Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[20]/td[2]/a containing Festering Desire"}
+{"level":30,"time":"2022-09-11T18:11:33.204Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.205Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.205Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[20]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.212Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[20]/td[4] containing 42.4"}
+{"level":30,"time":"2022-09-11T18:11:33.212Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.214Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.215Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[21]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.221Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[21]/td[2]/a containing Amenoma Kageuchi"}
+{"level":30,"time":"2022-09-11T18:11:33.221Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.222Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.222Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[21]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.229Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[21]/td[4] containing 41.07"}
+{"level":30,"time":"2022-09-11T18:11:33.229Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.231Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.231Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[22]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.238Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[22]/td[2]/a containing Cinnabar Spindle"}
+{"level":30,"time":"2022-09-11T18:11:33.238Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.239Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.239Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[22]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.245Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[22]/td[4] containing 41.07"}
+{"level":30,"time":"2022-09-11T18:11:33.245Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.247Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.247Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[23]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.253Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[23]/td[2]/a containing Kagotsurube Isshin"}
+{"level":30,"time":"2022-09-11T18:11:33.254Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.255Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.255Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[23]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.261Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[23]/td[4] containing 42.4"}
+{"level":30,"time":"2022-09-11T18:11:33.262Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.264Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.264Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[24]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.270Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[24]/td[2]/a containing Sapwood Blade"}
+{"level":30,"time":"2022-09-11T18:11:33.270Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.272Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.272Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[24]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.280Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[24]/td[4] containing 43.73"}
+{"level":30,"time":"2022-09-11T18:11:33.280Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.282Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.282Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[25]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.288Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[25]/td[2]/a containing Xiphos' Moonlight"}
+{"level":30,"time":"2022-09-11T18:11:33.288Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.289Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.289Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[25]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.296Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[25]/td[4] containing 42.4"}
+{"level":30,"time":"2022-09-11T18:11:33.296Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.298Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.298Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[26]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.304Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[26]/td[2]/a containing Prized Isshin Blade"}
+{"level":30,"time":"2022-09-11T18:11:33.304Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.305Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.305Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[26]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.313Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[26]/td[4] containing 42.4"}
+{"level":30,"time":"2022-09-11T18:11:33.313Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.315Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.315Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[27]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.321Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[27]/td[2]/a containing Prized Isshin Blade"}
+{"level":30,"time":"2022-09-11T18:11:33.321Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.323Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.323Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[27]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.329Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[27]/td[4] containing 42.4"}
+{"level":30,"time":"2022-09-11T18:11:33.329Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.331Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.331Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[28]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.338Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[28]/td[2]/a containing Prized Isshin Blade"}
+{"level":30,"time":"2022-09-11T18:11:33.338Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.339Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.339Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[28]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.345Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[28]/td[4] containing 42.4"}
+{"level":30,"time":"2022-09-11T18:11:33.345Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.347Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.347Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[29]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.354Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[29]/td[2]/a containing Aquila Favonia"}
+{"level":30,"time":"2022-09-11T18:11:33.354Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.355Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.355Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[29]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.362Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[29]/td[4] containing 47.54"}
+{"level":30,"time":"2022-09-11T18:11:33.362Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.364Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.364Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[30]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.370Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[30]/td[2]/a containing Skyward Blade"}
+{"level":30,"time":"2022-09-11T18:11:33.370Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.371Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.372Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[30]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.380Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[30]/td[4] containing 45.94"}
+{"level":30,"time":"2022-09-11T18:11:33.380Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.382Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.382Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[31]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.389Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[31]/td[2]/a containing Freedom-Sworn"}
+{"level":30,"time":"2022-09-11T18:11:33.389Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.391Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.391Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[31]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.399Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[31]/td[4] containing 45.94"}
+{"level":30,"time":"2022-09-11T18:11:33.399Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.401Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.401Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[32]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.409Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[32]/td[2]/a containing Summit Shaper"}
+{"level":30,"time":"2022-09-11T18:11:33.409Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.410Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.410Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[32]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.417Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[32]/td[4] containing 45.94"}
+{"level":30,"time":"2022-09-11T18:11:33.417Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.419Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.419Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[33]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.428Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[33]/td[2]/a containing Primordial Jade Cutter"}
+{"level":30,"time":"2022-09-11T18:11:33.428Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.430Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.430Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[33]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.440Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[33]/td[4] containing 44.34"}
+{"level":30,"time":"2022-09-11T18:11:33.440Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.442Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.443Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[34]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.451Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[34]/td[2]/a containing Mistsplitter Reforged"}
+{"level":30,"time":"2022-09-11T18:11:33.451Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.453Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.453Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[34]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.459Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[34]/td[4] containing 47.54"}
+{"level":30,"time":"2022-09-11T18:11:33.459Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.462Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.462Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[35]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.471Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[35]/td[2]/a containing Haran Geppaku Futsu"}
+{"level":30,"time":"2022-09-11T18:11:33.471Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.473Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.473Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[35]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.483Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[35]/td[4] containing 45.94"}
+{"level":30,"time":"2022-09-11T18:11:33.483Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.486Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.486Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[36]/td[2]/a in page."}
+{"level":30,"time":"2022-09-11T18:11:33.497Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[36]/td[2]/a containing Key of Khaj-Nisut"}
+{"level":30,"time":"2022-09-11T18:11:33.497Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.499Z","pid":896,"hostname":"jarvis","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.499Z","pid":896,"hostname":"jarvis","msg":"Strict mode is enabled, find Locator with //*[@class='genshin_table sortable weapon_table']/tbody/tr[36]/td[4] in page."}
+{"level":30,"time":"2022-09-11T18:11:33.507Z","pid":896,"hostname":"jarvis","msg":"Retrieved text for element //*[@class='genshin_table sortable weapon_table']/tbody/tr[36]/td[4] containing 44.34"}
+{"level":30,"time":"2022-09-11T18:11:33.507Z","pid":896,"hostname":"jarvis","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-11T18:11:33.525Z","pid":896,"hostname":"jarvis","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-11T18:11:33.526Z","pid":896,"hostname":"jarvis","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-11T18:11:33.528Z","pid":896,"hostname":"jarvis","msg":"Changed active context"}
+{"level":30,"time":"2022-09-11T18:11:33.528Z","pid":896,"hostname":"jarvis","msg":"Changing current active page"}
+{"level":30,"time":"2022-09-11T18:11:33.528Z","pid":896,"hostname":"jarvis","msg":"Changed active page"}
+{"level":30,"time":"2022-09-11T18:11:33.530Z","pid":896,"hostname":"jarvis","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-11T18:11:33.532Z","pid":896,"hostname":"jarvis","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-11T18:11:33.533Z","pid":896,"hostname":"jarvis","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2022-09-11T18:11:33.534Z","pid":896,"hostname":"jarvis","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2022-09-11T18:11:33.534Z","pid":896,"hostname":"jarvis","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2022-09-11T18:11:33.534Z","pid":896,"hostname":"jarvis","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2022-09-11T18:11:33.536Z","pid":896,"hostname":"jarvis","msg":"Changed active context"}
+{"level":30,"time":"2022-09-11T18:11:33.536Z","pid":896,"hostname":"jarvis","msg":"Changing current active page"}
+{"level":30,"time":"2022-09-11T18:11:33.536Z","pid":896,"hostname":"jarvis","msg":"Changed active page"}
+{"level":30,"time":"2022-09-11T18:11:33.537Z","pid":896,"hostname":"jarvis","msg":"Start of node method closeContext"}
+{"level":30,"time":"2022-09-11T18:11:33.543Z","pid":896,"hostname":"jarvis","msg":"Removed page=2eca4aab-9da5-4cc0-844a-d390f6f5c4e6 from context=d74b49f0-8edd-44db-94bd-b0b2424987c0 page stack"}
+{"level":30,"time":"2022-09-11T18:11:33.566Z","pid":896,"hostname":"jarvis","msg":"End of node method closeContext"}
+{"level":30,"time":"2022-09-11T18:11:33.570Z","pid":896,"hostname":"jarvis","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-11T18:11:33.570Z","pid":896,"hostname":"jarvis","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-11T18:11:33.616Z","pid":896,"hostname":"jarvis","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2022-09-11T18:11:33.733Z","pid":896,"hostname":"jarvis","msg":"End of node method closeAllBrowsers"}

@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220911 15:11:26.997" rpa="true" schemaversion="3">
+<suite id="s1" name="Get Honey Hunter Info" source="C:\Users\TinGooLeeCo\Documents\WS-Robot\Sword-Atk-Stats-Robot\get_honey_hunter_info.robot">
+<test id="s1-t1" name="Exportando dados de itens do Genshin para o Excel" line="10">
+<kw name="Dado que eu esteja no Honey Hunter">
+<kw name="New Browser" library="Browser">
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20220911 15:11:27.970" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0, "tracesDir": "C:\\Users\\TinGooLeeCo\\Documents\\WS-Robot\\Sword-Atk-Stats-Robot\\browser\\traces\\4a5d3d32-7ca9-439b-b0a3-757f1d9d0272"}</msg>
+<msg timestamp="20220911 15:11:28.280" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0,"tracesDir":"C:\\Users\\TinGooLeeCo\\Documents\\WS-Robot\\Sword-Atk-Stats-Robot\\browser\\traces\\4a5d3d32-7ca9-439b-b0a3-757f1d9d0272"}</msg>
+<status status="PASS" starttime="20220911 15:11:27.970" endtime="20220911 15:11:28.281"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://genshin.honeyhunterworld.com/?lang=EN</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20220911 15:11:29.489" level="INFO">Successfully initialized new page object and opened url: https://genshin.honeyhunterworld.com/?lang=EN</msg>
+<msg timestamp="20220911 15:11:29.489" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20220911 15:11:28.281" endtime="20220911 15:11:29.489"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:27.970" endtime="20220911 15:11:29.489"/>
+</kw>
+<kw name="Quando clicar na categoria Swords">
+<kw name="Click" library="Browser">
+<arg>//*[@id="ncmp__tool"]/div/div/div[3]/div[1]/button[2]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220911 15:11:29.490" endtime="20220911 15:11:29.713"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@for='1609326270']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220911 15:11:29.713" endtime="20220911 15:11:29.966"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@for='1937977254']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220911 15:11:29.966" endtime="20220911 15:11:30.277"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>//*[@id="weapons"]/table/tbody/tr/td[1]/select</arg>
+<arg>text</arg>
+<arg>100</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" starttime="20220911 15:11:30.277" endtime="20220911 15:11:30.817"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:29.489" endtime="20220911 15:11:30.817"/>
+</kw>
+<kw name="Entao trazer os campos de nome e ataque para um dicionario">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220911 15:11:32.820" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220911 15:11:30.817" endtime="20220911 15:11:32.820"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${LIST_ITEMS}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220911 15:11:32.820" level="INFO">${LIST_ITEMS} = []</msg>
+<status status="PASS" starttime="20220911 15:11:32.820" endtime="20220911 15:11:32.820"/>
+</kw>
+<kw name="Get Element Count" library="Browser">
+<var>${table_rows}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.826" level="INFO">${table_rows} = 36</msg>
+<status status="PASS" starttime="20220911 15:11:32.820" endtime="20220911 15:11:32.826"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${counter}</var>
+<value>1</value>
+<value>${table_rows+1}</value>
+<iter>
+<var name="${counter}">1</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.840" level="INFO">${nome} = Dull Blade</msg>
+<status status="PASS" starttime="20220911 15:11:32.826" endtime="20220911 15:11:32.840"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.850" level="INFO">${atk} = 23.25</msg>
+<status status="PASS" starttime="20220911 15:11:32.840" endtime="20220911 15:11:32.850"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:32.850" level="INFO">${sword_atk} = {'nome ': " 'Dull Blade'", 'atk ': " '23.25'"}</msg>
+<status status="PASS" starttime="20220911 15:11:32.850" endtime="20220911 15:11:32.850"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:32.850" endtime="20220911 15:11:32.850"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:32.826" endtime="20220911 15:11:32.850"/>
+</iter>
+<iter>
+<var name="${counter}">2</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.861" level="INFO">${nome} = Silver Sword</msg>
+<status status="PASS" starttime="20220911 15:11:32.851" endtime="20220911 15:11:32.861"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.869" level="INFO">${atk} = 32.93</msg>
+<status status="PASS" starttime="20220911 15:11:32.861" endtime="20220911 15:11:32.869"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:32.870" level="INFO">${sword_atk} = {'nome ': " 'Silver Sword'", 'atk ': " '32.93'"}</msg>
+<status status="PASS" starttime="20220911 15:11:32.869" endtime="20220911 15:11:32.870"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:32.870" endtime="20220911 15:11:32.870"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:32.850" endtime="20220911 15:11:32.870"/>
+</iter>
+<iter>
+<var name="${counter}">3</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.878" level="INFO">${nome} = Cool Steel</msg>
+<status status="PASS" starttime="20220911 15:11:32.870" endtime="20220911 15:11:32.879"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.887" level="INFO">${atk} = 38.74</msg>
+<status status="PASS" starttime="20220911 15:11:32.879" endtime="20220911 15:11:32.887"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:32.887" level="INFO">${sword_atk} = {'nome ': " 'Cool Steel'", 'atk ': " '38.74'"}</msg>
+<status status="PASS" starttime="20220911 15:11:32.887" endtime="20220911 15:11:32.887"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:32.887" endtime="20220911 15:11:32.887"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:32.870" endtime="20220911 15:11:32.887"/>
+</iter>
+<iter>
+<var name="${counter}">4</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.896" level="INFO">${nome} = Harbinger of Dawn</msg>
+<status status="PASS" starttime="20220911 15:11:32.887" endtime="20220911 15:11:32.896"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.904" level="INFO">${atk} = 38.74</msg>
+<status status="PASS" starttime="20220911 15:11:32.896" endtime="20220911 15:11:32.904"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:32.905" level="INFO">${sword_atk} = {'nome ': " 'Harbinger of Dawn'", 'atk ': " '38.74'"}</msg>
+<status status="PASS" starttime="20220911 15:11:32.905" endtime="20220911 15:11:32.905"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:32.905" endtime="20220911 15:11:32.905"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:32.887" endtime="20220911 15:11:32.905"/>
+</iter>
+<iter>
+<var name="${counter}">5</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.913" level="INFO">${nome} = Traveler's Handy Sword</msg>
+<status status="PASS" starttime="20220911 15:11:32.905" endtime="20220911 15:11:32.913"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.922" level="INFO">${atk} = 39.88</msg>
+<status status="PASS" starttime="20220911 15:11:32.914" endtime="20220911 15:11:32.922"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:32.922" level="INFO">${sword_atk} = {'nome ': " 'Traveler's Handy Sword'", 'atk ': " '39.88'"}</msg>
+<status status="PASS" starttime="20220911 15:11:32.922" endtime="20220911 15:11:32.922"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:32.922" endtime="20220911 15:11:32.922"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:32.905" endtime="20220911 15:11:32.922"/>
+</iter>
+<iter>
+<var name="${counter}">6</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.931" level="INFO">${nome} = Dark Iron Sword</msg>
+<status status="PASS" starttime="20220911 15:11:32.923" endtime="20220911 15:11:32.931"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.940" level="INFO">${atk} = 38.74</msg>
+<status status="PASS" starttime="20220911 15:11:32.931" endtime="20220911 15:11:32.940"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:32.940" level="INFO">${sword_atk} = {'nome ': " 'Dark Iron Sword'", 'atk ': " '38.74'"}</msg>
+<status status="PASS" starttime="20220911 15:11:32.940" endtime="20220911 15:11:32.940"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:32.940" endtime="20220911 15:11:32.941"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:32.923" endtime="20220911 15:11:32.941"/>
+</iter>
+<iter>
+<var name="${counter}">7</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.949" level="INFO">${nome} = Fillet Blade</msg>
+<status status="PASS" starttime="20220911 15:11:32.941" endtime="20220911 15:11:32.949"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.956" level="INFO">${atk} = 38.74</msg>
+<status status="PASS" starttime="20220911 15:11:32.949" endtime="20220911 15:11:32.956"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:32.957" level="INFO">${sword_atk} = {'nome ': " 'Fillet Blade'", 'atk ': " '38.74'"}</msg>
+<status status="PASS" starttime="20220911 15:11:32.957" endtime="20220911 15:11:32.957"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:32.957" endtime="20220911 15:11:32.957"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:32.941" endtime="20220911 15:11:32.957"/>
+</iter>
+<iter>
+<var name="${counter}">8</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.965" level="INFO">${nome} = Skyrider Sword</msg>
+<status status="PASS" starttime="20220911 15:11:32.957" endtime="20220911 15:11:32.965"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.973" level="INFO">${atk} = 37.61</msg>
+<status status="PASS" starttime="20220911 15:11:32.966" endtime="20220911 15:11:32.973"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:32.973" level="INFO">${sword_atk} = {'nome ': " 'Skyrider Sword'", 'atk ': " '37.61'"}</msg>
+<status status="PASS" starttime="20220911 15:11:32.973" endtime="20220911 15:11:32.973"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:32.973" endtime="20220911 15:11:32.974"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:32.957" endtime="20220911 15:11:32.974"/>
+</iter>
+<iter>
+<var name="${counter}">9</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.984" level="INFO">${nome} = Favonius Sword</msg>
+<status status="PASS" starttime="20220911 15:11:32.974" endtime="20220911 15:11:32.984"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:32.993" level="INFO">${atk} = 41.07</msg>
+<status status="PASS" starttime="20220911 15:11:32.984" endtime="20220911 15:11:32.993"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:32.993" level="INFO">${sword_atk} = {'nome ': " 'Favonius Sword'", 'atk ': " '41.07'"}</msg>
+<status status="PASS" starttime="20220911 15:11:32.993" endtime="20220911 15:11:32.993"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:32.993" endtime="20220911 15:11:32.994"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:32.974" endtime="20220911 15:11:32.994"/>
+</iter>
+<iter>
+<var name="${counter}">10</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.003" level="INFO">${nome} = The Flute</msg>
+<status status="PASS" starttime="20220911 15:11:32.994" endtime="20220911 15:11:33.003"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.011" level="INFO">${atk} = 42.4</msg>
+<status status="PASS" starttime="20220911 15:11:33.003" endtime="20220911 15:11:33.011"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.011" level="INFO">${sword_atk} = {'nome ': " 'The Flute'", 'atk ': " '42.4'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.011" endtime="20220911 15:11:33.011"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.011" endtime="20220911 15:11:33.012"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:32.994" endtime="20220911 15:11:33.012"/>
+</iter>
+<iter>
+<var name="${counter}">11</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.020" level="INFO">${nome} = Sacrificial Sword</msg>
+<status status="PASS" starttime="20220911 15:11:33.012" endtime="20220911 15:11:33.020"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.030" level="INFO">${atk} = 41.07</msg>
+<status status="PASS" starttime="20220911 15:11:33.021" endtime="20220911 15:11:33.030"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.031" level="INFO">${sword_atk} = {'nome ': " 'Sacrificial Sword'", 'atk ': " '41.07'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.030" endtime="20220911 15:11:33.031"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.031" endtime="20220911 15:11:33.031"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.012" endtime="20220911 15:11:33.031"/>
+</iter>
+<iter>
+<var name="${counter}">12</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.038" level="INFO">${nome} = Royal Longsword</msg>
+<status status="PASS" starttime="20220911 15:11:33.031" endtime="20220911 15:11:33.039"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.046" level="INFO">${atk} = 42.4</msg>
+<status status="PASS" starttime="20220911 15:11:33.039" endtime="20220911 15:11:33.046"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.047" level="INFO">${sword_atk} = {'nome ': " 'Royal Longsword'", 'atk ': " '42.4'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.047" endtime="20220911 15:11:33.047"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.047" endtime="20220911 15:11:33.047"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.031" endtime="20220911 15:11:33.047"/>
+</iter>
+<iter>
+<var name="${counter}">13</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.055" level="INFO">${nome} = Lion's Roar</msg>
+<status status="PASS" starttime="20220911 15:11:33.047" endtime="20220911 15:11:33.055"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.089" level="INFO">${atk} = 42.4</msg>
+<status status="PASS" starttime="20220911 15:11:33.055" endtime="20220911 15:11:33.089"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.089" level="INFO">${sword_atk} = {'nome ': " 'Lion's Roar'", 'atk ': " '42.4'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.089" endtime="20220911 15:11:33.089"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.089" endtime="20220911 15:11:33.089"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.047" endtime="20220911 15:11:33.089"/>
+</iter>
+<iter>
+<var name="${counter}">14</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.097" level="INFO">${nome} = Prototype Rancour</msg>
+<status status="PASS" starttime="20220911 15:11:33.090" endtime="20220911 15:11:33.098"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.105" level="INFO">${atk} = 43.73</msg>
+<status status="PASS" starttime="20220911 15:11:33.098" endtime="20220911 15:11:33.105"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.105" level="INFO">${sword_atk} = {'nome ': " 'Prototype Rancour'", 'atk ': " '43.73'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.105" endtime="20220911 15:11:33.105"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.105" endtime="20220911 15:11:33.105"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.090" endtime="20220911 15:11:33.105"/>
+</iter>
+<iter>
+<var name="${counter}">15</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.113" level="INFO">${nome} = Iron Sting</msg>
+<status status="PASS" starttime="20220911 15:11:33.105" endtime="20220911 15:11:33.113"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.121" level="INFO">${atk} = 42.4</msg>
+<status status="PASS" starttime="20220911 15:11:33.113" endtime="20220911 15:11:33.121"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.121" level="INFO">${sword_atk} = {'nome ': " 'Iron Sting'", 'atk ': " '42.4'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.121" endtime="20220911 15:11:33.121"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.121" endtime="20220911 15:11:33.121"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.105" endtime="20220911 15:11:33.121"/>
+</iter>
+<iter>
+<var name="${counter}">16</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.131" level="INFO">${nome} = Blackcliff Longsword</msg>
+<status status="PASS" starttime="20220911 15:11:33.122" endtime="20220911 15:11:33.131"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.139" level="INFO">${atk} = 43.73</msg>
+<status status="PASS" starttime="20220911 15:11:33.131" endtime="20220911 15:11:33.139"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.140" level="INFO">${sword_atk} = {'nome ': " 'Blackcliff Longsword'", 'atk ': " '43.73'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.139" endtime="20220911 15:11:33.140"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.140" endtime="20220911 15:11:33.140"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.121" endtime="20220911 15:11:33.140"/>
+</iter>
+<iter>
+<var name="${counter}">17</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.148" level="INFO">${nome} = The Black Sword</msg>
+<status status="PASS" starttime="20220911 15:11:33.140" endtime="20220911 15:11:33.149"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.156" level="INFO">${atk} = 42.4</msg>
+<status status="PASS" starttime="20220911 15:11:33.149" endtime="20220911 15:11:33.156"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.157" level="INFO">${sword_atk} = {'nome ': " 'The Black Sword'", 'atk ': " '42.4'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.156" endtime="20220911 15:11:33.157"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.157" endtime="20220911 15:11:33.157"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.140" endtime="20220911 15:11:33.157"/>
+</iter>
+<iter>
+<var name="${counter}">18</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.165" level="INFO">${nome} = The Alley Flash</msg>
+<status status="PASS" starttime="20220911 15:11:33.157" endtime="20220911 15:11:33.165"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.175" level="INFO">${atk} = 45.07</msg>
+<status status="PASS" starttime="20220911 15:11:33.166" endtime="20220911 15:11:33.175"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.175" level="INFO">${sword_atk} = {'nome ': " 'The Alley Flash'", 'atk ': " '45.07'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.175" endtime="20220911 15:11:33.175"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.175" endtime="20220911 15:11:33.176"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.157" endtime="20220911 15:11:33.176"/>
+</iter>
+<iter>
+<var name="${counter}">19</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.185" level="INFO">${nome} = Sword of Descension</msg>
+<status status="PASS" starttime="20220911 15:11:33.176" endtime="20220911 15:11:33.185"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.195" level="INFO">${atk} = 38.74</msg>
+<status status="PASS" starttime="20220911 15:11:33.185" endtime="20220911 15:11:33.195"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.196" level="INFO">${sword_atk} = {'nome ': " 'Sword of Descension'", 'atk ': " '38.74'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.195" endtime="20220911 15:11:33.196"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.196" endtime="20220911 15:11:33.196"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.176" endtime="20220911 15:11:33.196"/>
+</iter>
+<iter>
+<var name="${counter}">20</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.204" level="INFO">${nome} = Festering Desire</msg>
+<status status="PASS" starttime="20220911 15:11:33.196" endtime="20220911 15:11:33.204"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.213" level="INFO">${atk} = 42.4</msg>
+<status status="PASS" starttime="20220911 15:11:33.204" endtime="20220911 15:11:33.213"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.213" level="INFO">${sword_atk} = {'nome ': " 'Festering Desire'", 'atk ': " '42.4'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.213" endtime="20220911 15:11:33.213"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.213" endtime="20220911 15:11:33.214"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.196" endtime="20220911 15:11:33.214"/>
+</iter>
+<iter>
+<var name="${counter}">21</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.221" level="INFO">${nome} = Amenoma Kageuchi</msg>
+<status status="PASS" starttime="20220911 15:11:33.214" endtime="20220911 15:11:33.221"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.229" level="INFO">${atk} = 41.07</msg>
+<status status="PASS" starttime="20220911 15:11:33.221" endtime="20220911 15:11:33.229"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.230" level="INFO">${sword_atk} = {'nome ': " 'Amenoma Kageuchi'", 'atk ': " '41.07'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.229" endtime="20220911 15:11:33.230"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.230" endtime="20220911 15:11:33.230"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.214" endtime="20220911 15:11:33.230"/>
+</iter>
+<iter>
+<var name="${counter}">22</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.238" level="INFO">${nome} = Cinnabar Spindle</msg>
+<status status="PASS" starttime="20220911 15:11:33.230" endtime="20220911 15:11:33.238"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.246" level="INFO">${atk} = 41.07</msg>
+<status status="PASS" starttime="20220911 15:11:33.238" endtime="20220911 15:11:33.246"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.246" level="INFO">${sword_atk} = {'nome ': " 'Cinnabar Spindle'", 'atk ': " '41.07'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.246" endtime="20220911 15:11:33.246"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.246" endtime="20220911 15:11:33.246"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.230" endtime="20220911 15:11:33.246"/>
+</iter>
+<iter>
+<var name="${counter}">23</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.254" level="INFO">${nome} = Kagotsurube Isshin</msg>
+<status status="PASS" starttime="20220911 15:11:33.247" endtime="20220911 15:11:33.254"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.262" level="INFO">${atk} = 42.4</msg>
+<status status="PASS" starttime="20220911 15:11:33.254" endtime="20220911 15:11:33.262"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.262" level="INFO">${sword_atk} = {'nome ': " 'Kagotsurube Isshin'", 'atk ': " '42.4'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.262" endtime="20220911 15:11:33.262"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.263" endtime="20220911 15:11:33.263"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.247" endtime="20220911 15:11:33.263"/>
+</iter>
+<iter>
+<var name="${counter}">24</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.271" level="INFO">${nome} = Sapwood Blade</msg>
+<status status="PASS" starttime="20220911 15:11:33.263" endtime="20220911 15:11:33.271"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.280" level="INFO">${atk} = 43.73</msg>
+<status status="PASS" starttime="20220911 15:11:33.271" endtime="20220911 15:11:33.280"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.281" level="INFO">${sword_atk} = {'nome ': " 'Sapwood Blade'", 'atk ': " '43.73'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.280" endtime="20220911 15:11:33.281"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.281" endtime="20220911 15:11:33.281"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.263" endtime="20220911 15:11:33.281"/>
+</iter>
+<iter>
+<var name="${counter}">25</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.288" level="INFO">${nome} = Xiphos' Moonlight</msg>
+<status status="PASS" starttime="20220911 15:11:33.281" endtime="20220911 15:11:33.288"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.296" level="INFO">${atk} = 42.4</msg>
+<status status="PASS" starttime="20220911 15:11:33.288" endtime="20220911 15:11:33.296"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.297" level="INFO">${sword_atk} = {'nome ': " 'Xiphos' Moonlight'", 'atk ': " '42.4'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.296" endtime="20220911 15:11:33.297"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.297" endtime="20220911 15:11:33.297"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.281" endtime="20220911 15:11:33.297"/>
+</iter>
+<iter>
+<var name="${counter}">26</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.304" level="INFO">${nome} = Prized Isshin Blade</msg>
+<status status="PASS" starttime="20220911 15:11:33.297" endtime="20220911 15:11:33.304"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.313" level="INFO">${atk} = 42.4</msg>
+<status status="PASS" starttime="20220911 15:11:33.305" endtime="20220911 15:11:33.313"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.314" level="INFO">${sword_atk} = {'nome ': " 'Prized Isshin Blade'", 'atk ': " '42.4'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.313" endtime="20220911 15:11:33.314"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.314" endtime="20220911 15:11:33.314"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.297" endtime="20220911 15:11:33.314"/>
+</iter>
+<iter>
+<var name="${counter}">27</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.322" level="INFO">${nome} = Prized Isshin Blade</msg>
+<status status="PASS" starttime="20220911 15:11:33.314" endtime="20220911 15:11:33.322"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.330" level="INFO">${atk} = 42.4</msg>
+<status status="PASS" starttime="20220911 15:11:33.322" endtime="20220911 15:11:33.330"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.330" level="INFO">${sword_atk} = {'nome ': " 'Prized Isshin Blade'", 'atk ': " '42.4'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.330" endtime="20220911 15:11:33.330"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.330" endtime="20220911 15:11:33.330"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.314" endtime="20220911 15:11:33.330"/>
+</iter>
+<iter>
+<var name="${counter}">28</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.338" level="INFO">${nome} = Prized Isshin Blade</msg>
+<status status="PASS" starttime="20220911 15:11:33.330" endtime="20220911 15:11:33.338"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.346" level="INFO">${atk} = 42.4</msg>
+<status status="PASS" starttime="20220911 15:11:33.338" endtime="20220911 15:11:33.346"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.346" level="INFO">${sword_atk} = {'nome ': " 'Prized Isshin Blade'", 'atk ': " '42.4'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.346" endtime="20220911 15:11:33.346"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.346" endtime="20220911 15:11:33.346"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.330" endtime="20220911 15:11:33.346"/>
+</iter>
+<iter>
+<var name="${counter}">29</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.354" level="INFO">${nome} = Aquila Favonia</msg>
+<status status="PASS" starttime="20220911 15:11:33.347" endtime="20220911 15:11:33.354"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.362" level="INFO">${atk} = 47.54</msg>
+<status status="PASS" starttime="20220911 15:11:33.355" endtime="20220911 15:11:33.362"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.363" level="INFO">${sword_atk} = {'nome ': " 'Aquila Favonia'", 'atk ': " '47.54'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.362" endtime="20220911 15:11:33.363"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.363" endtime="20220911 15:11:33.363"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.346" endtime="20220911 15:11:33.363"/>
+</iter>
+<iter>
+<var name="${counter}">30</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.371" level="INFO">${nome} = Skyward Blade</msg>
+<status status="PASS" starttime="20220911 15:11:33.363" endtime="20220911 15:11:33.371"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.380" level="INFO">${atk} = 45.94</msg>
+<status status="PASS" starttime="20220911 15:11:33.371" endtime="20220911 15:11:33.380"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.381" level="INFO">${sword_atk} = {'nome ': " 'Skyward Blade'", 'atk ': " '45.94'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.380" endtime="20220911 15:11:33.381"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.381" endtime="20220911 15:11:33.381"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.363" endtime="20220911 15:11:33.381"/>
+</iter>
+<iter>
+<var name="${counter}">31</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.390" level="INFO">${nome} = Freedom-Sworn</msg>
+<status status="PASS" starttime="20220911 15:11:33.381" endtime="20220911 15:11:33.390"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.399" level="INFO">${atk} = 45.94</msg>
+<status status="PASS" starttime="20220911 15:11:33.390" endtime="20220911 15:11:33.399"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.400" level="INFO">${sword_atk} = {'nome ': " 'Freedom-Sworn'", 'atk ': " '45.94'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.399" endtime="20220911 15:11:33.400"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.400" endtime="20220911 15:11:33.400"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.381" endtime="20220911 15:11:33.400"/>
+</iter>
+<iter>
+<var name="${counter}">32</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.409" level="INFO">${nome} = Summit Shaper</msg>
+<status status="PASS" starttime="20220911 15:11:33.400" endtime="20220911 15:11:33.409"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.417" level="INFO">${atk} = 45.94</msg>
+<status status="PASS" starttime="20220911 15:11:33.409" endtime="20220911 15:11:33.417"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.418" level="INFO">${sword_atk} = {'nome ': " 'Summit Shaper'", 'atk ': " '45.94'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.417" endtime="20220911 15:11:33.418"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.418" endtime="20220911 15:11:33.418"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.400" endtime="20220911 15:11:33.418"/>
+</iter>
+<iter>
+<var name="${counter}">33</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.429" level="INFO">${nome} = Primordial Jade Cutter</msg>
+<status status="PASS" starttime="20220911 15:11:33.418" endtime="20220911 15:11:33.429"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.440" level="INFO">${atk} = 44.34</msg>
+<status status="PASS" starttime="20220911 15:11:33.429" endtime="20220911 15:11:33.441"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.441" level="INFO">${sword_atk} = {'nome ': " 'Primordial Jade Cutter'", 'atk ': " '44.34'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.441" endtime="20220911 15:11:33.441"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.441" endtime="20220911 15:11:33.441"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.418" endtime="20220911 15:11:33.441"/>
+</iter>
+<iter>
+<var name="${counter}">34</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.451" level="INFO">${nome} = Mistsplitter Reforged</msg>
+<status status="PASS" starttime="20220911 15:11:33.441" endtime="20220911 15:11:33.451"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.460" level="INFO">${atk} = 47.54</msg>
+<status status="PASS" starttime="20220911 15:11:33.452" endtime="20220911 15:11:33.460"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.460" level="INFO">${sword_atk} = {'nome ': " 'Mistsplitter Reforged'", 'atk ': " '47.54'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.460" endtime="20220911 15:11:33.460"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.461" endtime="20220911 15:11:33.461"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.441" endtime="20220911 15:11:33.461"/>
+</iter>
+<iter>
+<var name="${counter}">35</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.472" level="INFO">${nome} = Haran Geppaku Futsu</msg>
+<status status="PASS" starttime="20220911 15:11:33.461" endtime="20220911 15:11:33.472"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.483" level="INFO">${atk} = 45.94</msg>
+<status status="PASS" starttime="20220911 15:11:33.472" endtime="20220911 15:11:33.483"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.484" level="INFO">${sword_atk} = {'nome ': " 'Haran Geppaku Futsu'", 'atk ': " '45.94'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.484" endtime="20220911 15:11:33.484"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.484" endtime="20220911 15:11:33.484"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.461" endtime="20220911 15:11:33.484"/>
+</iter>
+<iter>
+<var name="${counter}">36</var>
+<kw name="Get Text" library="Browser">
+<var>${nome}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[2]/a</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.497" level="INFO">${nome} = Key of Khaj-Nisut</msg>
+<status status="PASS" starttime="20220911 15:11:33.484" endtime="20220911 15:11:33.497"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${atk}</var>
+<arg>//*[@class='genshin_table sortable weapon_table']/tbody/tr[${counter}]/td[4]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220911 15:11:33.508" level="INFO">${atk} = 44.34</msg>
+<status status="PASS" starttime="20220911 15:11:33.498" endtime="20220911 15:11:33.508"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${sword_atk}</var>
+<arg>nome = '${nome}'</arg>
+<arg>atk = '${atk}'</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220911 15:11:33.509" level="INFO">${sword_atk} = {'nome ': " 'Key of Khaj-Nisut'", 'atk ': " '44.34'"}</msg>
+<status status="PASS" starttime="20220911 15:11:33.508" endtime="20220911 15:11:33.509"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${LIST_ITEMS}</arg>
+<arg>${sword_atk}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220911 15:11:33.509" endtime="20220911 15:11:33.509"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.484" endtime="20220911 15:11:33.509"/>
+</iter>
+<status status="PASS" starttime="20220911 15:11:32.826" endtime="20220911 15:11:33.509"/>
+</for>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${LIST_ITEMS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220911 15:11:33.509" level="INFO">${LIST_ITEMS} = [{'nome ': " 'Dull Blade'", 'atk ': " '23.25'"}, {'nome ': " 'Silver Sword'", 'atk ': " '32.93'"}, {'nome ': " 'Cool Steel'", 'atk ': " '38.74'"}, {'nome ': " 'Harbinger of Dawn'", 'atk ': " '38.74'"}...</msg>
+<status status="PASS" starttime="20220911 15:11:33.509" endtime="20220911 15:11:33.509"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:30.817" endtime="20220911 15:11:33.509"/>
+</kw>
+<kw name="Entao exportar para uma planilha Excel os dados">
+<kw name="Create Workbook" library="RPA.Excel.Files">
+<doc>Create and open a new Excel workbook.</doc>
+<status status="PASS" starttime="20220911 15:11:33.510" endtime="20220911 15:11:33.511"/>
+</kw>
+<kw name="Append Rows To Worksheet" library="RPA.Excel.Files">
+<arg>content=${LIST_ITEMS}</arg>
+<doc>Append values to the end of the worksheet.</doc>
+<status status="PASS" starttime="20220911 15:11:33.511" endtime="20220911 15:11:33.512"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<arg>SwordAtkStats.xlsx</arg>
+<doc>Save the active workbook.</doc>
+<status status="PASS" starttime="20220911 15:11:33.512" endtime="20220911 15:11:33.523"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:33.510" endtime="20220911 15:11:33.524"/>
+</kw>
+<status status="PASS" starttime="20220911 15:11:27.968" endtime="20220911 15:11:33.524"/>
+</test>
+<doc>Robo para capturar dados de ataques das espadas de Genshin Impact</doc>
+<status status="PASS" starttime="20220911 15:11:26.998" endtime="20220911 15:11:33.568"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Get Honey Hunter Info">Get Honey Hunter Info</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
